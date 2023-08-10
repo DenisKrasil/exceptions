@@ -2,23 +2,22 @@ import java.util.Arrays;
 
 public class second {
     public static void main(String[] args) {
-        int[] arr1  = {7, 4, 0, 8, 9, 10};
-    int[] arr2 = {1, 2, 3, 0, 3};
+    int[] arr1  = {7, 4, 0, 8, 9, 10};
+    int[] arr2 = {1, 2, 3, 0, 3,};
     System.out.println(Arrays.toString(subArr(arr1, arr2)));
 }
 
-    public static int[] subArr (int[] arr1, int[] arr2){
-        int [] arr3 = new int[arr1.length];
-        if (arr1.length != arr2.length){
-            throw new RuntimeException("Длины массивов не равны");
+    public static int[] subArr (int[] a, int[] b){
+        int [] c = new int[a.length];
+        if (a.length != b.length){
+            int [] arr = {0};
+            return arr;
         }
-        for (int i = 0; i < arr3.length; i++) {
-            if (arr2 [i]==0) {
-                throw new RuntimeException("На ноль делить нельзя");
-            }
-            arr3 [i] = arr1[i]/arr2[i];
+        for (int i = 0; i < c.length; i++) {
+            
+            c [i] = a[i]/b[i];
     }
-    return arr3;
+    return c;
     }  
 }
 
